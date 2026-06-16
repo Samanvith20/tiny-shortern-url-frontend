@@ -1,11 +1,11 @@
-import { Link } from "@tanstack/react-router";
+
 import { Github } from "lucide-react";
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-border/60 bg-background/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
-        <Link to="/" className="flex items-center gap-2.5">
+        <a href="/" className="flex items-center gap-2.5">
           <span className="grid size-8 place-items-center rounded-lg bg-foreground text-background">
             <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 17H7A5 5 0 0 1 7 7h2" />
@@ -14,7 +14,7 @@ export function SiteHeader() {
             </svg>
           </span>
           <span className="font-display text-lg font-bold tracking-tight">Trim</span>
-        </Link>
+        </a>
 
         <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
           <a href="#features" className="transition-colors hover:text-foreground">Features</a>

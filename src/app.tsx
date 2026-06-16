@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/site-header";
 import { FeaturesSection, HowItWorksSection } from "@/components/landing-sections";
 import { listUrls } from "@/lib/api";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute()({
   head: () => ({
     meta: [
       { title: "Trim — Short links with real analytics" },
@@ -23,10 +23,10 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: HomePage,
+  component: App,
 });
 
-function HomePage() {
+export default function App() {
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
@@ -38,7 +38,6 @@ function HomePage() {
     </div>
   );
 }
-
 function Hero() {
   const { data } = useQuery({ queryKey: ["urls"], queryFn: listUrls });
   const totalLinks = data?.length ?? 0;
